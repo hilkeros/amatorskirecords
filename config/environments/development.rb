@@ -27,4 +27,14 @@ Recordstore::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  #Active Merchant Gateway according to Railscast
+  
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+      :login => "amator_1336153125_biz_api1.gmail.com",
+      :password => "1336153150",
+      :signature => "ArkR06gnCZU1r8AxQfQ.8S.7I-YgAszBLZPZtOhJox8pgzCe4otwEH3."
+    )
 end

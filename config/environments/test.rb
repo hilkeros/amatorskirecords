@@ -36,4 +36,10 @@ Recordstore::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  #ActiveMerchant according to Railscast
+  
+  config.after_initalize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::GATEWAY = ActiveMerchant::Billing::BogusGateway.new
 end

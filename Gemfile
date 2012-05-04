@@ -17,6 +17,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'activemerchant', :require => 'active_merchant'
 
 
 group :development do

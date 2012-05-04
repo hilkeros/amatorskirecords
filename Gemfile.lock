@@ -15,6 +15,17 @@ GEM
       rack-mount (~> 0.8.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.0.3)
+    active_utils (1.0.3)
+      activesupport (>= 2.3.11)
+      i18n
+    activemerchant (1.20.1)
+      active_utils (>= 1.0.1)
+      activesupport (>= 2.3.11)
+      braintree (>= 2.0.0)
+      builder (>= 2.0.0)
+      i18n
+      json (>= 1.5.1)
+      money (<= 3.7.1)
     activemodel (3.1.3)
       activesupport (= 3.1.3)
       builder (~> 3.0.0)
@@ -30,6 +41,8 @@ GEM
     activesupport (3.1.3)
       multi_json (~> 1.0)
     arel (2.2.3)
+    braintree (2.14.0)
+      builder (>= 2.0.0)
     builder (3.0.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
@@ -57,6 +70,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.18)
+    money (3.7.1)
+      i18n (~> 0.4)
     multi_json (1.3.4)
     nokogiri (1.5.2)
     polyglot (0.3.3)
@@ -129,6 +144,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemerchant
   coffee-rails (~> 3.1.1)
   factory_girl_rails (= 1.0)
   jquery-rails

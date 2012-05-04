@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :street, :street_number, :box_number, :zipcode, :city, :country, :pay_type, :amount, :paid, :shipped
-  attr_accessor :card_number, :card_verification, :card_type, :card_expires_on
+  attr_accessor :card_number, :card_verification, :card_type, :card_expires_on, :ip_address
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   

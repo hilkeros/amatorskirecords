@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
   
   def credit
     @order = Order.find(params[:id])
+    @order.ip_address = request.remote_ip
     
   end
   
