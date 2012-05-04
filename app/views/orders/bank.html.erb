@@ -1,0 +1,14 @@
+<p>Thanks for your order,  <%= @order.first_name %>.</p>
+<p>
+	You decided to pay via bank transfer. Please pay the right amount to the following bank account:
+</p>
+<p>
+	Motion Music vzw<br />
+	BE
+</p>
+<p>
+	Please transfer the amount of € <%= @order.price%>.
+</p>
+<p>
+	Payment instructions will also be sent to <%= @order.email%>
+</p>
