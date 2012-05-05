@@ -18,6 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'activemerchant', :require => 'active_merchant'
+gem 'nifty-generators', '>= 0.4.0'
 
 
 group :development do
@@ -42,3 +43,4 @@ end
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem "mocha", :group => :test

@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
     @order.save!
     if @order.pay_type == 'credit'
-      render :action => 'credit'
+      redirect_to new_card_path(:order => @order.id)
     else
       render :action => 'bank'
     end
@@ -20,12 +20,6 @@ class OrdersController < ApplicationController
   def bank
      @order = Order.find(params[:id])
      
-  end
-  
-  def credit
-    @order = Order.find(params[:id])
-    @order.ip_address = request.remote_ip
-    
   end
   
 end

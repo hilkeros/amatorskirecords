@@ -37,4 +37,5 @@ Recordstore::Application.configure do
       :password => "1336153150",
       :signature => "ArkR06gnCZU1r8AxQfQ.8S.7I-YgAszBLZPZtOhJox8pgzCe4otwEH3."
     )
+  end
 end

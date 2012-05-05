@@ -1,4 +1,6 @@
 Recordstore::Application.routes.draw do
+  resources :cards
+
   resources :orders
   
   root :to => "orders#new"
